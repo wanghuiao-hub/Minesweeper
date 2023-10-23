@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>扫雷</title>
+    <link rel="shortcut icon" href="./images/logo.ico" />
+    <link rel="stylesheet" href="./css/index.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="message">
+      </div>
+      <div class="chartHit">
+        <div class="chartHit-title">扫雷英雄榜</div>
+        <div class="chartHit-content">
+          <div class="record record-easy">
+            初级: <b class="record-count"></b>秒
+            <div class="name"></div>
+          </div>
+          <div class="record record-average">
+            中级: <b class="record-count"></b>秒
+            <div class="name"></div>
+          </div>
+          <div class="record record-hard">
+            高级: <b class="record-count"></b>秒
+            <div class="name"></div>
+          </div>
+        </div>
+        <div class="chartHit-btn">
+          <button class="confirm-btn">确定</button>
+          <button class="reset-chartHit-btn">重新计分</button>
+        </div>
+      </div>
+
+      <div class="record-breaking">
+        <div class="desc">
+          <div>已破<span class="leve"></span>记录。</div>
+          <div>请留尊姓大名。</div>
+        </div>
+        <input type="text" class="name-ipt" />
+        <button class="confirm-btn">确定</button>
+      </div>
+
+      <div class="menuBar">
+        <select class="difficultySelect">
+          <option value="easy">初级</option>
+          <option value="average">中级</option>
+          <option value="hard">高级</option>
+        </select>
+        <button class="chartHit-show-btn">扫雷英雄榜</button>
+        <button class="toggle-btn">暂停</button>
+      </div>
+
+      <div class="main">
+        <div class="shade">pause</div>
+        <div class="header">
+          <div class="mineCount">
+            <div current-number="0" class="number-item number-hundred"></div>
+            <div current-number="0" class="number-item number-ten"></div>
+            <div current-number="0" class="number-item number-single"></div>
+          </div>
+          <div class="resetBtn"></div>
+          <div class="timer">
+            <div current-number="0" class="number-item number-hundred"></div>
+            <div current-number="0" class="number-item number-ten"></div>
+            <div current-number="0" class="number-item number-single"></div>
+          </div>
+        </div>
+
+        <div class="reseau"></div>
+      </div>
+    </div>
+    <script src="./js/grid.js"></script>
+    <script src="./js/timing.js"></script>
+    <script src="./js/mine_count.js"></script>
+    <script src="./js/chart_hit.js"></script>
+    <script src="./js/message_trigger.js"></script>
+    <script src="./js/index.js"></script>
+  </body>
+</html>
